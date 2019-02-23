@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --watch",
+    "start": "nodemon server/index.js",
+    "populate": "node_modules/babel-cli/bin/babel-node.js populate.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +19,30 @@
   "bugs": {
     "url": "https://github.com/safe-sets/homepage/issues"
   },
-  "homepage": "https://github.com/safe-sets/homepage#readme"
+  "homepage": "https://github.com/safe-sets/homepage#readme",
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "axios": "^0.18.0",
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^8.0.5",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.10",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "react-redux": "^6.0.1",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.2.0"
+  },
+  "dependencies": {
+    "moment": "^2.24.0",
+    "mongoose": "^5.4.13",
+    "morgan": "^1.9.1"
+  }
 }
